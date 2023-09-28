@@ -3,12 +3,14 @@
   --DesaturatedDarkBlue: hsl(214, 17%, 51%);
   --GrayishBlue: hsl(212, 23%, 69%);
   --LightGrayishBlue: hsl(210, 46%, 95%);
-  
-
+  --boxShadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --font: 'Manrope', sans-serif;
 }
+
 html{
   box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after{
@@ -16,5 +18,51 @@ html{
 }
 
 body{
-  background-color: grey;
+  background-color: var(--LightGrayishBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--font);
+}
+
+.container{
+  background-color: white;
+  width: 335px;
+  /* height: 340px; */
+  overflow: hidden;
+  border-radius: 3%;
+  box-shadow: var(--boxShadow);
+}
+
+.drawers{
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+}
+
+.heading{
+  /* border: 2px solid red; */
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 1rem;
+  word-spacing: 2px;
+  line-height: 1.6;
+  color: var(--VeryDarkGrayishBlue);
+}
+
+.paragraph{
+  /* border: 2px solid green; */
+  border: 2px solid #00968800;
+  color: var(--DesaturatedDarkBlue);
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 12px;
+  /* remove after text settings are set */
+  margin-bottom: 60px; 
+  line-height: 1.6;
+  font-size: .7rem;
+  border-right-width: 38px;
 }
