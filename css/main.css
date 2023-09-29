@@ -28,7 +28,7 @@ body{
 
 .container{
   background-color: white;
-  width: 335px;
+  width: 320px;
   /* height: 340px; */
   overflow: hidden;
   border-radius: 3%;
@@ -44,25 +44,68 @@ body{
 
 .heading{
   /* border: 2px solid red; */
+  color: var(--VeryDarkGrayishBlue);
   width: 80%;
   margin: 0 auto;
   margin-top: 20px;
   font-size: 1rem;
-  word-spacing: 2px;
+  /* word-spacing: 2px; */
   line-height: 1.6;
-  color: var(--VeryDarkGrayishBlue);
 }
 
 .paragraph{
   /* border: 2px solid green; */
-  border: 2px solid #00968800;
+  /* border: 2px solid #00968800; */
   color: var(--DesaturatedDarkBlue);
   width: 80%;
   margin: 0 auto;
-  margin-top: 12px;
-  /* remove after text settings are set */
-  margin-bottom: 60px; 
+  margin-top: 10px;
+  margin-bottom: 45px; 
   line-height: 1.6;
-  font-size: .7rem;
-  border-right-width: 38px;
+  font-size: .76rem;
+  word-spacing: 1px;
+  /* border-right-width: 38px; */
 }
+
+.author{
+  /* border: 2px solid rgb(97, 36, 197); */
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.author-list{
+  /* background-color: yellow; */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.avatar{
+  width: 20px;
+  border-radius: 50%;
+
+}
+
+.author-list .item-3{
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.author-text{
+  font-size: .5rem;
+}
+.name{
+  color: var(--VeryDarkGrayishBlue);
+  font-size: .7rem;
+}
+.date{
+  margin-top: -6px;
+  color: var(--DesaturatedDarkBlue);
+}
+
+
+
+
+
