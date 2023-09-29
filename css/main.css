@@ -40,6 +40,7 @@ body{
   height: auto;
   border-top-left-radius: 3%;
   border-top-right-radius: 3%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 83%, 0% 83%);
 }
 
 .heading{
@@ -47,10 +48,10 @@ body{
   color: var(--VeryDarkGrayishBlue);
   width: 80%;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: -20px;
   font-size: 1rem;
   /* word-spacing: 2px; */
-  line-height: 1.6;
+  line-height: 1.6; 
 }
 
 .paragraph{
@@ -86,7 +87,6 @@ body{
 .avatar{
   width: 40px;
   border-radius: 50%;
-
 }
 
 .author-text{
@@ -108,8 +108,8 @@ body{
   margin-right: 6px;
 
   color: var(--DesaturatedDarkBlue);
-  font-size: 16px;
-  padding: 6px;
+  font-size: 15px;
+  padding: 8px;
   background-color: var(--LightGrayishBlue);
   border-radius: 50%;
 }
