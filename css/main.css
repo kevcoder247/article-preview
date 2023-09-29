@@ -60,7 +60,7 @@ body{
   width: 80%;
   margin: 0 auto;
   margin-top: 10px;
-  margin-bottom: 45px; 
+  margin-bottom: 25px; 
   line-height: 1.6;
   font-size: .76rem;
   word-spacing: 1px;
@@ -78,19 +78,15 @@ body{
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: 2px;
   display: flex;
   align-items: center;
   gap: 14px;
 }
 .avatar{
-  width: 20px;
+  width: 40px;
   border-radius: 50%;
 
-}
-
-.author-list .item-3{
-  margin-left: auto;
-  margin-right: 40px;
 }
 
 .author-text{
@@ -99,12 +95,24 @@ body{
 .name{
   color: var(--VeryDarkGrayishBlue);
   font-size: .7rem;
+  margin-top: 5px;
 }
 .date{
-  margin-top: -6px;
+  margin-top: -9px;
   color: var(--DesaturatedDarkBlue);
 }
 
+.author-list .item-3{
+  /* border: 1px solid red; */
+  margin-left: auto;
+  margin-right: 6px;
+
+  color: var(--DesaturatedDarkBlue);
+  font-size: 16px;
+  padding: 6px;
+  background-color: var(--LightGrayishBlue);
+  border-radius: 50%;
+}
 
 
 
