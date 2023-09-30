@@ -117,3 +117,76 @@ body{
 
 
 
+
+
+
+
+@media(min-width: 768px){
+  body{
+    background-color: rgb(66, 57, 57);
+  }
+
+  .container{
+    width: 560px;
+    height: 220px;
+    border-radius: 0%;
+    display: flex;
+  }
+
+  .drawers{
+    /* border:#824edc 2px solid; */
+    border-radius: inherit;
+    /* remove clip-path none and uncomment the clip-path below once I get the container right */
+    clip-path: none;
+    clip-path: polygon(0% 0%, 80% 0%, 80% 100%, 0% 100%);
+    width: 125%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+  .flex-item{
+    flex: 1;
+    /* border: 2px solid blue; */
+  }
+
+  .grow{
+    flex-grow: 2;
+    /* border: 2px solid yellow; */
+  }
+
+
+  
+  .a{
+    /* border: 2px solid green; */
+ 
+  }
+  .b{
+    /* border: 2px solid red; */
+  }
+
+ 
+
+
+  
+
+  .heading{
+    border: 2px solid rgb(15, 15, 11);
+    width: 80%;
+    margin-top: 20px;
+    line-height: inherit;
+  }
+  .paragraph{
+    border: 2px solid pink;
+    width: 85%;
+    display: none;
+  }
+  .author{
+    border: 2px solid blue;
+    display: none;
+  }
+
+}
+
+
+
+
