@@ -69,13 +69,14 @@ body{
 }
 
 .author{
-  border: 2px solid rgb(97, 36, 197);
+  /* border: 2px solid rgb(97, 36, 197); */
   width: 80%;
   margin: 0 auto;
   margin-bottom: 10px;
 }
 .author-list{
   /* background-color: yellow; */
+  /* border: 2px solid red; */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -114,13 +115,27 @@ body{
   border-radius: 50%;
 }
 
-.shareSection{
-  background-color: pink;
-  width: 100%;
-}
+/* === JS/CSS mobile styles === */
+
 .hide{
   display: none;
 }
+
+.shareText{
+  font-size: .9rem;
+  letter-spacing: 2px;
+}
+
+.re-adjust{
+  /* background-color: pink; */
+  /* width: 80%;
+  background-color: white; */
+}
+
+.social-links{
+  background-color: aqua;
+}
+
 
 
 

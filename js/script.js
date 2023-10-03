@@ -1,7 +1,10 @@
 const authorContainer = document.getElementById('author-container');
+const authorList = document.querySelector('.author-list');
 const shareBtn = document.getElementById('shareBtn');
 const avatar = document.querySelector('.avatar');
 const authorText = document.querySelector('.author-text');
+
+
 
 //create a flag to keep track of whether shareText has been added to the author container
 let shareTextAdded = false;
@@ -14,23 +17,71 @@ function toggleUI(){
   //Toggle the state
   isToggled = !isToggled;
 
+
   //Toggle hides avatar and text based on the toggle state
   avatar.classList.toggle('hide', isToggled);
   authorText.classList.toggle('hide', isToggled);
 
   //Check to see if toggle state is true(share text is visible)
   if(isToggled){
-    //create a new element that will hold the share text
-    const shareText = document.createElement('h4');
-    shareText.textContent = 'SHARE'
+    if(!shareTextAdded){
+      //create a new element that will hold the share text
+      const shareText = document.createElement('li');
+      shareText.textContent = `SHARE`
+      shareText.classList.add('shareText', 'item');
+      
+      //Append the newly created element to the author list
+      authorList.prepend(shareText);
 
-    //Append the newly created element to the author container
-    authorContainer.appendChild(shareText);
-  }else{
+
+
+      //create new element that holds social media links
+      const socialLinks = document.createElement('ul');
+      socialLinks.classList.add('social-links');
+
+      //Define an array of image filenames
+      const imageFilenames = ['icon-facebook.svg', 'icon-twitter.svg', 'icon-pinterest.svg'];
+
+      //specify the path to the images folder
+      const imagesFolderPath = 'images/';
+
+      //loop though the image filenames and create img elements for each
+      imageFilenames.forEach(iconFileName => {
+        //create an img element for the social media image
+        const socialMediaImage = document.createElement('img');
+
+        //set the src attribute to the path of the image in the images folder
+        socialMediaImage.src = `${imagesFolderPath}${iconFileName}`;
+
+        //append the image element to the social links
+        socialLinks.appendChild(socialMediaImage);
+      })
+
+      //append the sociallinks to the authorList
+      // authorList.appendChild(socialLinks);
+
+      //insert the social links element after the share text element
+      authorList.insertBefore(socialLinks, shareText.nextSibling);
+
+      
+      //Update the flag to indicate that sharedText has been added
+      sharedTextAdded = true;
+
+    }
+    }else{
     //Remove the shareText element if it exists
-    const shareText = authorContainer.querySelector('h4');
+    const shareText = authorContainer.querySelector('li');
     if(shareBtn){
-      authorContainer.removeChild(shareText);
+      authorList.removeChild(shareText);
+
+      //Remove social links element if it exits
+      const socialLinks = authorContainer.querySelector('.social-links');
+      if(socialLinks){
+        authorList.removeChild(socialLinks);
+      }
+
+      //Update the flag to indicate to false if shared text is added
+      sharedTextAdded = false;
     }
   }
 }
