@@ -121,19 +121,39 @@ body{
   display: none;
 }
 
-.shareText{
-  font-size: .9rem;
-  letter-spacing: 2px;
+.adjust-author-container{
+  width: 100%;
+  background-color: rgb(91, 188, 52); 
+  border: 1px solid var(--VeryDarkGrayishBlue);
+  background-color: var(--VeryDarkGrayishBlue);
+  margin-bottom: 0px;
 }
 
-.re-adjust{
-  /* background-color: pink; */
-  /* width: 80%;
-  background-color: white; */
+.shareText{
+  font-size: .85rem;
+  font-family: var(--font);
+  color: white;
+  letter-spacing: 7px;
+  padding-left: 20px;
+  padding-top: 12px;
+  text-transform: uppercase;
 }
 
 .social-links{
-  background-color: aqua;
+  /* background-color: aqua; */
+  /* border: 2px solid red; */
+  padding: 0px;
+  margin-top: 16px;
+}
+.social-links img{
+  margin-right: 10px;
+}
+
+.author-list .share-state-btn{
+  background-color: var(--DesaturatedDarkBlue);
+  color: var(--LightGrayishBlue);
+  margin-right: 35px;
+  margin-top: 15px;
 }
 
 

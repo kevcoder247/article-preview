@@ -4,7 +4,11 @@ const shareBtn = document.getElementById('shareBtn');
 const avatar = document.querySelector('.avatar');
 const authorText = document.querySelector('.author-text');
 
+//Store the original class of author container before adding 'adjust-author-container'
+const originalAuthorContainerClass = authorContainer.className;
 
+//store original state of the share btn
+const originalShareBtnState = shareBtn.className;
 
 //create a flag to keep track of whether shareText has been added to the author container
 let shareTextAdded = false;
@@ -27,7 +31,7 @@ function toggleUI(){
     if(!shareTextAdded){
       //create a new element that will hold the share text
       const shareText = document.createElement('li');
-      shareText.textContent = `SHARE`
+      shareText.textContent = `share`
       shareText.classList.add('shareText', 'item');
       
       //Append the newly created element to the author list
@@ -57,8 +61,6 @@ function toggleUI(){
         socialLinks.appendChild(socialMediaImage);
       })
 
-      //append the sociallinks to the authorList
-      // authorList.appendChild(socialLinks);
 
       //insert the social links element after the share text element
       authorList.insertBefore(socialLinks, shareText.nextSibling);
@@ -66,6 +68,13 @@ function toggleUI(){
       
       //Update the flag to indicate that sharedText has been added
       sharedTextAdded = true;
+
+
+      //set a new class for the author-list
+      authorContainer.classList.add('adjust-author-container');
+
+      //add a class to the share button which will allow us to add styles based on its state
+      shareBtn.classList.add('share-state-btn')
 
     }
     }else{
@@ -82,6 +91,13 @@ function toggleUI(){
 
       //Update the flag to indicate to false if shared text is added
       sharedTextAdded = false;
+
+      //Resotore the original class of author container
+      authorContainer.className = originalAuthorContainerClass;
+
+      //Restore the original state of share btn when clicked again
+      shareBtn.className = originalShareBtnState;
+
     }
   }
 }
