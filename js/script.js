@@ -3,6 +3,11 @@ const authorList = document.querySelector('.author-list');
 const shareBtn = document.getElementById('shareBtn');
 const avatar = document.querySelector('.avatar');
 const authorText = document.querySelector('.author-text');
+let  shareDiv = document.querySelector('.shareDiv');
+const pElement = document.querySelector('.flex-item.grow');
+
+
+
 
 //Store the original class of author container before adding 'adjust-author-container'
 const originalAuthorContainerClass = authorContainer.className;
@@ -74,8 +79,21 @@ function toggleUI(){
       authorContainer.classList.add('adjust-author-container');
 
       //add a class to the share button which will allow us to add styles based on its state
-      shareBtn.classList.add('share-state-btn')
+      shareBtn.classList.add('share-state-btn');
 
+
+      if(!shareDiv){
+        //For Desktop create div that displays share menu when the share button is clicked
+        shareDiv = document.createElement('div');
+      
+        //give div a class of shareDiv
+        shareDiv.className = 'shareDiv';
+        // shareDiv.innerHTML = 'share menu';
+        //Append shareDiv to the body
+        pElement.appendChild(shareDiv);
+
+
+      }
     }
     }else{
     //Remove the shareText element if it exists
@@ -83,7 +101,7 @@ function toggleUI(){
     if(shareBtn){
       authorList.removeChild(shareText);
 
-      //Remove social links element if it exits
+      //Remove social links element if it exists
       const socialLinks = authorContainer.querySelector('.social-links');
       if(socialLinks){
         authorList.removeChild(socialLinks);
@@ -98,6 +116,12 @@ function toggleUI(){
       //Restore the original state of share btn when clicked again
       shareBtn.className = originalShareBtnState;
 
+      //Hide share div when shareBtn
+      if(shareDiv){
+        pElement.removeChild(shareDiv);
+        shareDiv = null;
+      }
+
     }
   }
 }
@@ -105,8 +129,10 @@ function toggleUI(){
 
 //click event on the share button
 shareBtn.addEventListener('click', (e) => {
-  
   if(!shareTextAdded){
   toggleUI();
   }
 })
+
+
+

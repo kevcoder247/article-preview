@@ -19,6 +19,7 @@ html{
 
 body{
   background-color: var(--LightGrayishBlue);
+  background-color: grey;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,7 +116,8 @@ body{
   border-radius: 50%;
 }
 
-/* === JS/CSS mobile styles === */
+
+/* =============== Mobile JS/CSS  styles ================= */
 
 .hide{
   display: none;
@@ -123,7 +125,7 @@ body{
 
 .adjust-author-container{
   width: 100%;
-  background-color: rgb(91, 188, 52); 
+  /* background-color: rgb(91, 188, 52);  */
   border: 1px solid var(--VeryDarkGrayishBlue);
   background-color: var(--VeryDarkGrayishBlue);
   margin-bottom: 0px;
@@ -156,7 +158,11 @@ body{
   margin-top: 15px;
 }
 
-
+.shareDiv{
+  background-color: green;
+  display: none;
+}
+/* ======================================================= */
 
 
 @media(min-width: 768px){
@@ -167,8 +173,9 @@ body{
   .container{
     width: 560px;
     height: 225px;
-    border-radius: 3%;
+    border-radius: 15px;
     display: flex;
+    overflow: inherit;
   }
 
   .drawers{
@@ -176,8 +183,10 @@ body{
     border-radius: inherit;
     clip-path: polygon(0% 0%, 80% 0%, 80% 100%, 0% 100%);
     width: 125%;
-    height: 100%;
+    height: 101%;
     object-fit: fill;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
   }
   
   .flex-item{
@@ -195,20 +204,98 @@ body{
     width: 80%;
     margin-top: 22px;
     line-height: inherit;
-
-  }
+   }
   .paragraph{
     /* border: 2px solid pink; */
     /* display: none; */
     width: 80%;
     font-size: .63rem;
-    
+  }
+  .author{
+    /* border: 2px solid rgb(42, 180, 65); */
+    margin-top: -14px;
+  }
+  .author-list{
+    margin-bottom: -2px;
   }
 
 
   .author-list .item-3 {
-    margin-right: -2px;
+  
+    margin-right: -6px;
   }
+
+  .social-links{
+    display: none;
+  }
+  .author-list .share-state-btn{
+    /* background-color: green; */
+    margin-top: 0px;
+  }
+
+  .name{
+    margin-top: 10px;
+  }
+  .avatar{
+    /* margin-top: 20px; */
+  }
+
+  /* =============== Desktop JS/CSS  styles ================= */
+ .hide{
+    /* background-color: pink; */
+    display: block;
+  }
+  .shareDiv{
+    display: block;
+    width: 200px;
+    height: 42px;
+    background-color: var(--VeryDarkGrayishBlue); 
+    border-radius: 10px;
+    color: blue;
+    margin: auto;
+    margin-top: -102px;
+    margin-right: 0px;
+    position: relative;
+    right: -59px;
+    box-shadow: var(--boxShadow);
+  }
+  /* controls speech arrow */
+  .shareDiv::before{
+    content: "";
+    border: 11px solid transparent;
+    border-top-color:  var(--VeryDarkGrayishBlue);
+    border-bottom: 0;
+    position: relative;
+    bottom: -20px; 
+    left: 90px;
+    top: 52px;
+    margin-left: -4px;
+
+  }
+
+  .adjust-author-container{
+    width: 80%;
+    border: none;
+    background-color: white;
+    /* border: 2px solid red; */
+  }
+
+  .shareText{
+    display: none;
+  }
+  
+  .avatar-text{
+    /* background-color: rgb(130, 21, 21); */
+    /* margin-top: -20px; */
+  }
+
+  .float-left{
+    /* color: rgb(38, 13, 177);
+    position: relative;
+    right: 150px;
+    top: -30px; */
+  }
+
 
 }
 
